@@ -1,0 +1,8 @@
+CapacitorStorage.contRespuestasCorrectas
+4
+
+CapacitorStorage.respuestasSeleccionadas
+["When he put on the harmaki","Laura Brehm","C++","Fry Philip","256","Liverpool","Val Kilmer","The Governor","Suite Autumn","Vikings"]
+
+CapacitorStorage.respuestasCorrectas
+["Being run over by a truck","Laura Brehm","Binary","Philip J. Fry","256","Liverpool","Michael Keaton","The Governor","Halo","Maori"]

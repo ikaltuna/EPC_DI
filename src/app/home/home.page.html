@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TRIVIA
+    </ion-title>
+    <!-- Añadir ion-segment-->
+    <ion-segment value={{selectedSegment}} (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="introduccion">
+        <ion-label>Introducción</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="preguntas">
+        <ion-label>Preguntas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="ranking">
+        <ion-label>Ranking</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <!-- Gestionar el control para mostrar un componente u otro. 
+    -- Utilizaremos un ion-card por cada componente.
+    -->
+  <ion-card *ngIf="selectedSegment === 'introduccion'">
+    <app-introduccion
+      [titulo]="tituloHome"
+      [urlImagen]="urlImagenHome"
+      [descripcion]="descripcionHome">
+    </app-introduccion>
+  </ion-card>
+  <ion-card *ngIf="selectedSegment === 'preguntas'">
+    <app-preguntas></app-preguntas>
+  </ion-card>
+  <ion-card *ngIf="selectedSegment === 'ranking'">
+    <app-ranking></app-ranking>
+  </ion-card>
+</ion-content>
+

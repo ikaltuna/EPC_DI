@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TRIVIA
+    </ion-title>
+    <!-- Añadir ion-segment-->
+  </ion-toolbar>
+</ion-header>
+
+<!-- OPCION 1-->
+<!-- SI SE UTILIZAN LOS COMPONENTES UTILIZAR ESTE ion-content Y AÑADIR DENTRO LOS COMPONENTES.
+  -- EN CASO CONTRARIO BORRARLO.
+  -->
+<ion-content class="ion-padding" [fullscreen]="true">
+  <!-- Gestionar el control para mostrar un componente u otro. 
+    -- Utilizaremos un ion-card por cada componente.
+    -->
+</ion-content>
+
+
+<!-- OPCION2 -->
+<!-- SI HAY PROBLEMAS AL UTILIZAR LOS COMPONENTES, UTILIZAR ESTE ion-content Y AÑADIR DENTRO TODO LO QUE TENDRÍA QUE IR EN EL COMPONENTE. 
+  -- EN CASO CONTRARIO BORRARLO.
+  -->
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <!-- Mediante el ngFor leemos pregunta por pregunta. 
+  -- Controlamos el index de cada pregunta, para realizar diferentes gestiones con este. 
+  -->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title></ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <!-- Por cada pregunta, mostramos las posibles respuestas de forma aleatoria.
+      -- Comprobamos si el array botonSeleccionadoPreguntaIndex incluye los index de los botones seleccionados,
+      -- para poner todas las respuestas de esas pregunta como disabled
+      -- Mediante [ngClass], ponemos el estilo "boton-seleccionado", a las respuestas que hemos seleccionado. 
+      -- Ejemplo: [ngClass]="{'boton-seleccionado': miCondicion}", donde "miCondicion" será true o false, 
+      -- dependiendo de si la respuesta está en el array respuestasSeleccionadas.
+      -- "boton-seleccionado" está declarado en preguntas.component.scss
+      -->
+    <ion-button>
+
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+<!-- Botonera -->
+<ion-row>
+  <ion-col size="6">
+    <!-- El botón guardar resultados estará deshabilitado hasta que se hayan respondido todas las preguntas.
+      -- Se puede hacer uso de la etiqueta [disabled]
+      -->
+    <ion-button>
+      Guardar Resultados
+    </ion-button>
+  </ion-col>
+  <!-- El botón volver a jugar estará deshabilitado hasta que se haya pulsado el botón Guardar Resultados-->
+  <ion-col  size="6">
+    <ion-button>
+      Volver a jugar!
+    </ion-button>
+  </ion-col>
+</ion-row>
+</ion-content>
+

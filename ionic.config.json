@@ -1,0 +1,7 @@
+{
+  "name": "DI_PlantillaExamenParcial_2324",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

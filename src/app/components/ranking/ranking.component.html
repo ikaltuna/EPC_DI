@@ -1,0 +1,40 @@
+<ion-card>
+    <ion-card-header>
+      <ion-card-title>Resultados de la última partida</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-label>Respuestas selecionadas</ion-label>
+                    <ion-list>
+                        <ion-item *ngFor="let item of respuestasSeleccionadasRanking">
+                            <ion-label>{{item}}</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+                
+                <ion-col size="6">
+                    <ion-label>Respuestas correctas</ion-label>
+                    
+                    <ion-list>
+                        <ion-item *ngFor="let item of respuestasCorrectasRanking">
+                            
+                            <ion-label>{{item}}</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>      
+    </ion-card-content>
+</ion-card>
+
+<ion-card>
+    <ion-card-header>
+        <ion-card-title>Contador de Respuestas Correctas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-label>{{contRespuestasCorrectasRanking}}</ion-label>
+    </ion-card-content>
+</ion-card>  
